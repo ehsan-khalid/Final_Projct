@@ -7,6 +7,7 @@ import android.view.View;
 
 public class All_post extends AppCompatActivity {
 
+    int i;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
