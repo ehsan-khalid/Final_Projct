@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TRACK_IT</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">اسم المستخدم</string>
+    <string name="nav_header_subtitle">777777777</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+
+    <string name="menu_home">الرئيسية</string>
+    <string name="menu_gallery">الملف الشخصي</string>
+    <string name="menu_slideshow">الطرود المرسلة</string>
+    <string name="menu_tools">حول</string>
+    <string name="menu_share">مساعدة</string>
+    <string name="menu_send">مشاركة التطبيق</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

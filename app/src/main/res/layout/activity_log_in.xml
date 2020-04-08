@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff9e2"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context=".Log_in">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        app:srcCompat="@drawable/logo_for_project" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="#5F5E5D"
+        android:textDirection="rtl">
+
+        <EditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_phone_black_24dp"
+            android:ems="10"
+            android:hint="رقم الهاتف"
+            android:inputType="phone"
+            android:textColorLink="#ffc606"
+            android:textSize="18dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:defaultFocusHighlightEnabled="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="#5F5E5D"
+        android:textDirection="rtl"
+
+        app:helperTextEnabled="false"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="كلمة المرور"
+            android:inputType="textPassword"
+            android:layoutDirection="rtl"
+            android:textAllCaps="false"
+
+            android:textColorLink="#ffc606"
+            android:textDirection="rtl"
+            android:textSize="18dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:onClick="forget_pass"
+        android:text="نسيت كلمة المرور ؟"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape"
+        android:onClick="login"
+        android:text="دخول"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+
+
+        android:id="@+id/button4"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape"
+        android:onClick="create_account"
+        android:text="إنشاء حساب"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

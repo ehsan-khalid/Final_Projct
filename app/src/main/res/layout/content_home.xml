@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff9e2"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Home"
+    tools:showIn="@layout/app_bar_home"
+    android:padding="20dp"
+    android:layoutDirection="rtl">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/logo_for_project" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        >
+        <TextView
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="مرحبا بك "
+            android:gravity="center" />
+        <TextView
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" أحمد" />
+
+
+
+    </LinearLayout>
+    <TextView
+
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
+        android:padding="15dp"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="الرجاء الضغط على زر إرسال طرد لطلب خدمة إرسال طرد , أو الضغط على زر تتبع الطرد إذا أردت تتبع طردك . "
+        android:gravity="center" />
+    <Button
+        android:onClick="send"
+        android:id="@+id/send_post"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape"
+        android:text="ارسال طرد"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:onClick="track_post"
+        android:id="@+id/button4"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape"
+        android:text="تتبع طرد"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
