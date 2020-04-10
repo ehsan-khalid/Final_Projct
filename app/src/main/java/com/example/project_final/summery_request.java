@@ -28,20 +28,27 @@ public class summery_request extends AppCompatActivity {
         String phone=  bundle.getString("reciever_phone");
         String package_description=  bundle.getString("package_desc");
 
+
+        rec_name.setText(name);
+        rec_phone.setText(phone);
+        describe.setText(package_description);
+
         String type=getIntent().getStringExtra("type");
         String size=getIntent().getStringExtra("size");
         package_type.setText(type);
         package_size.setText(size);
 
-
-        describe.setText(package_description);
-        rec_name.setText(name);
-        rec_phone.setText(phone);
-
+        ///////////////////////////////////////
         double lat=bundle.getDouble("lat");
-        double lon=bundle.getDouble("lon");
+        double lon=bundle.getDouble("lg");
 
         rec_location.setText(""+lat+","+lon);
+       /////////////////////////////////////
+
+
+
+
+
     }
 
     public void confirm(View view) {

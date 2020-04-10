@@ -147,10 +147,10 @@
                 android:textSize="20dp" />
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/receiver_location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="10dp"
                 android:paddingRight="2dp"
                 android:text="صنعاء, حده "
                 android:textColor="#4B4A4A"
