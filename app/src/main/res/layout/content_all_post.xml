@@ -7,8 +7,10 @@
     android:background="#fff9e2"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".Home"
+    tools:context=".AllPostActivity"
     android:padding="15dp"
+    tools:showIn="@layout/app_bar_all_post"
+
     android:layoutDirection="rtl">
 
     <LinearLayout

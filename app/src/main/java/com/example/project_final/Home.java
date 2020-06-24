@@ -75,14 +75,12 @@ public class Home extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.send_post) {
-            Intent intent=new Intent(getApplicationContext(),All_post.class);
+            Intent intent=new Intent(getApplicationContext(),AllPostActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_tools) {
 
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        }else if (id == R.id.nav_send) {
 
         }
 
@@ -102,6 +100,7 @@ public class Home extends AppCompatActivity
         Intent intent=new Intent(getApplicationContext(),Receiver_data.class);
         startActivity(intent);
     }
+
 
 
 }

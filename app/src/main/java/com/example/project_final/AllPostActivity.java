@@ -1,13 +1,103 @@
 package com.example.project_final;
 
+import android.content.Intent;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
+import android.view.View;
 
-public class AllPostActivity extends AppCompatActivity {
+public class AllPostActivity extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_post);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+        navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+
+
+  /*  @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+
+
+        return super.onOptionsItemSelected(item);
+    }*/
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_home) {
+            Intent intent=new Intent(getApplicationContext(),Home.class);
+            startActivity(intent);
+            // Handle the camera action
+        } else if (id == R.id.UserProfile) {
+            Intent intent=new Intent(getApplicationContext(),User_Profile.class);
+            startActivity(intent);
+
+        } else if (id == R.id.send_post) {
+            Intent intent=new Intent(getApplicationContext(),AllPostActivity.class);
+            startActivity(intent);
+
+        } else if (id == R.id.nav_tools) {
+
+        }  else if (id == R.id.nav_send) {
+
+        }
+
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+    public void send(View view) {
+
+        Intent intent=new Intent(getApplicationContext(),package_data.class);
+        startActivity(intent);
+
+    }
+
+    public void track_post(View view) {
+        Intent intent=new Intent(getApplicationContext(),Receiver_data.class);
+        startActivity(intent);
+    }
+
+    public void go_to_Details_order(View view) {
+        Intent intent=new Intent(getApplicationContext(),details_order.class);
+        startActivity(intent);
     }
 }
