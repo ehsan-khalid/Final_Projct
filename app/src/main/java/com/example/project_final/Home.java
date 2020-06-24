@@ -70,7 +70,9 @@ public class Home extends AppCompatActivity
             Intent intent=new Intent(getApplicationContext(),Home.class);
             startActivity(intent);
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.UserProfile) {
+            Intent intent=new Intent(getApplicationContext(),User_Profile.class);
+            startActivity(intent);
 
         } else if (id == R.id.send_post) {
             Intent intent=new Intent(getApplicationContext(),All_post.class);

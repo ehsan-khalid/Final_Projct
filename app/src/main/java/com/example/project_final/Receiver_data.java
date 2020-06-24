@@ -17,7 +17,7 @@ public class Receiver_data extends AppCompatActivity {
         setContentView(R.layout.activity_receiver_data);
         TextView receiver_location=(TextView)findViewById(R.id.receiver_location);
         Bundle bundle =getIntent().getExtras();
-
+////////////////
         double lat=bundle.getDouble("lat");
         double lg=bundle.getDouble("lg");
         receiver_location.setText(""+lat+","+lg);

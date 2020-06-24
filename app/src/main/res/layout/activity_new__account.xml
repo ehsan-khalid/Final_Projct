@@ -44,16 +44,18 @@
         android:layout_height="wrap_content"
         android:orientation="vertical" >
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:textColorHint="#5F5E5D"
-            android:textDirection="rtl">
+            android:textDirection="rtl"
+            >
 
             <EditText
-
+                android:id="@+id/UserName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_person_black_24dp"
@@ -66,6 +68,7 @@
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
+            android:id="@+id/input_email"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:focusable="true"
@@ -75,6 +78,7 @@
 
             <EditText
 
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_email_black_24dp"
@@ -88,6 +92,7 @@
 
 
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/phone_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -97,7 +102,7 @@
             android:textDirection="rtl">
 
             <EditText
-
+                android:id="@+id/phone_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_phone_black_24dp"
@@ -120,9 +125,11 @@
             app:helperTextEnabled="false"
             app:passwordToggleEnabled="true"
             android:layoutDirection="rtl"
+            android:id="@+id/password1_input"
             >
 
             <EditText
+                android:id="@+id/password1"
                 android:layoutDirection="rtl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -147,9 +154,12 @@
             app:helperTextEnabled="false"
             app:passwordToggleEnabled="true"
             android:layoutDirection="rtl"
+            android:id="@+id/password2_input"
+
             >
 
             <EditText
+                android:id="@+id/password2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -162,6 +172,7 @@
         </android.support.design.widget.TextInputLayout>
 
         <Button
+            android:onClick="create"
             android:id="@+id/button3"
             android:layout_width="195dp"
             android:layout_height="wrap_content"
