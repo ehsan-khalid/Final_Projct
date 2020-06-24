@@ -15,6 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AllPostActivity"></activity>
         <activity android:name=".details_order" />
         <activity android:name=".send_finished_content" />
         <activity android:name=".All_post" />
