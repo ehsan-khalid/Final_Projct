@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".AboutApp"
+    android:background="#fff9e2"
+    >
+    <LinearLayout
+        android:layout_marginTop="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FAF4DF"
+        android:orientation="vertical"
+        android:padding="10dp"
+
+        >
+
+
+        <TextView
+            android:paddingTop="3dp"
+            android:layout_gravity="center"
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="اسم التطبيق " />
+
+        <TextView
+            android:textColor="#686764"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Track It" />
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:background="#CCC9C9"
+        >
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FAF4DF"
+        android:orientation="vertical"
+        android:padding="10dp"
+    >
+
+
+        <TextView
+            android:paddingTop="3dp"
+            android:layout_gravity="center"
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="وصف التطبيق " />
+
+        <TextView
+            android:padding="10dp"
+            android:gravity="center"
+            android:textColor="#686764"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="تطبيق Track It يقوم بإرسال طلبات إرسال الطرود من مدينة الى إخرى وإمكانية تتبع  ومعرفة حالة الطرد من خلال التطبيق وذلك لتوفير كافة سبل الراحة والأمان لعملائنا الأعزاء." />
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:background="#CCC9C9"
+        >
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FAF4DF"
+        android:orientation="vertical"
+        android:padding="10dp"
+        >
+
+
+        <TextView
+            android:paddingTop="3dp"
+            android:layout_gravity="center"
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="نسخة الطبيق  " />
+
+        <TextView
+            android:textColor="#686764"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.0"/>
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:background="#CCC9C9"
+        >
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FAF4DF"
+        android:orientation="vertical"
+        android:padding="10dp"
+        >
+
+
+        <TextView
+            android:paddingTop="3dp"
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="للتواصل معنا عبر الإيميل  "
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="TrackIt@gmail.com"
+            android:textColor="#686764"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:background="#CCC9C9"
+        >
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -18,13 +18,18 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Locale;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
+    int ID;
+    String Uname,Uphone;
     private GoogleMap mMap;
     double lg,lat;
     Marker marker;
-
+    Geocoder gc;
+    List<Address>addresses;
+    String fullAdress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +40,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        Bundle b=getIntent().getExtras();
 
+        Uname= b.getString("Name");
+        Uphone= b.getString("Phone");
+        ID=b.getInt("ID");
 
+        Toast.makeText(MapsActivity.this,""+ID,Toast.LENGTH_SHORT).show();
 
     }
 
@@ -55,39 +65,26 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
+        LatLng sydney = new LatLng(33, 0.2);
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Yemen"));
          mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 final GoogleMap mp =mMap;
     //    mMap.setMyLocationEnabled(true);
+        /*
 
-
-
-
-
-
-     /*   Geocoder gc=new Geocoder(this);
-        List<Address>list= null;
         String  locality;
-        try {
-            list = gc.getFromLocation(lat,lg,1);
-            Address address=list.get(0);
-              locality=address.getLocality();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
        ////////////////////////////
+*/
 
-        Geocoder gc=new Geocoder(MapsActivity.this);
-
- */
         mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(LatLng latLng) {
 
-
-
                 if (marker != null) {
                     marker.remove();
+                    mp.clear();
+
                 }
                   marker=  mp.addMarker(new MarkerOptions()
                             .position(latLng)
@@ -97,7 +94,21 @@ final GoogleMap mp =mMap;
                 lat=latLng.latitude;
                 lg=latLng.longitude;
 
-                Toast.makeText(MapsActivity.this, lat+"--"+lg, Toast.LENGTH_SHORT).show();
+                gc=new Geocoder(MapsActivity.this);
+                try {
+
+                    addresses = gc.getFromLocation(lat,lg,1);
+                    String adreess=addresses.get(0).getAddressLine(0);
+                    String area=addresses.get(0).getLocality();
+                    String city=addresses.get(0).getAdminArea();
+                    String country=addresses.get(0).getCountryName();
+                    fullAdress=adreess+" ,"+area+" ,"+city+" ,"+country;
+
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Toast.makeText(MapsActivity.this, fullAdress, Toast.LENGTH_SHORT).show();
 
                 Intent intent=new Intent(getApplicationContext(),Receiver_data.class);
 
@@ -106,14 +117,19 @@ final GoogleMap mp =mMap;
                 String name=getIntent().getStringExtra("reciever_name");
                 String phone=getIntent().getStringExtra("reciever_phone");
                 String describe=getIntent().getStringExtra("package_desc");
-                intent.putExtra("type",type);
-                intent.putExtra("size",size);
                 intent.putExtra("reciever_name",name);
                 intent.putExtra("reciever_phone",phone);
-                intent.putExtra("package_desc",describe);
                 intent.putExtra("lg",lg);
                 intent.putExtra("lat",lat);
-                startActivity(intent);
+                Bundle b=new Bundle();
+                b.putInt("ID",ID);
+                b.putString("Name",Uname);
+                b.putString("Phone",Uphone);
+                b.putString("type",type);
+                b.putString("size",size);
+                b.putString("package_desc",describe);
+                intent.putExtras(b);
+startActivity(intent);
 
             }
         });

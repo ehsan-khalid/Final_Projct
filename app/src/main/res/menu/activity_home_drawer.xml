@@ -19,12 +19,12 @@
             android:icon="@drawable/post"
             android:title="@string/menu_slideshow" />
         <item
-            android:id="@+id/nav_tools"
+            android:id="@+id/AboutApp"
             android:icon="@drawable/about"
             android:title="@string/menu_tools" />
 
         <item
-            android:id="@+id/nav_send"
+            android:id="@+id/Share"
             android:icon="@drawable/ic_menu_share"
             android:title="@string/menu_send" />
 

@@ -33,83 +33,57 @@
     </LinearLayout>
 
 
-    <LinearLayout
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/ReciverNameInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:layout_marginTop="50dp"
-        android:orientation="vertical"
-        android:layout_marginBottom="30dp"
-
-
-
+        android:layout_marginBottom="50dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="#5F5E5D"
+        android:textDirection="rtl"
         >
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:text="اسم المستلم "
-            android:textStyle="bold"
-            android:textColor="#918F8F"
-            android:textSize="20dp" />
-
         <EditText
-            android:textDirection="rtl"
 
-            android:id="@+id/receiver_name_et"
+            android:id="@+id/ReciverName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:textColorLink="#ffc606" />
-    </LinearLayout>
+            android:hint="اسم المستلم"
+            android:textColorLink="#ffc606"
+            android:textSize="18dp" />
+    </android.support.design.widget.TextInputLayout>
 
-
-
-
-    <LinearLayout
-
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
+        android:id="@+id/Reciver_phone_Input"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:orientation="vertical"
-        android:padding="3dp"
+        android:layout_marginBottom="50dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="#5F5E5D"
+        android:textDirection="rtl">
 
-        >
-
-        <TextView
-
-
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:textStyle="bold"
-            android:text="رقم الهاتف "
-            android:textColor="#918F8F"
-            android:textSize="20dp" />
         <EditText
-            android:id="@+id/receiver_phone_et"
-            android:layoutDirection="rtl"
-            android:textDirection="rtl"
+            android:id="@+id/ReciverPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_phone_black_24dp"
             android:ems="10"
+            android:hint="رقم الهاتف"
             android:inputType="phone"
-            android:textColorLink="#ffc606" />
-
-    </LinearLayout>
-
-
+            android:textColorLink="#ffc606"
+            android:textSize="18dp" />
+    </android.support.design.widget.TextInputLayout>
 
 
 
 
 
 
-    <LinearLayout
+   <LinearLayout
         android:layoutDirection="ltr"
         android:layout_marginBottom="40dp"
         android:background="#FFEFD5"

@@ -7,8 +7,9 @@
          location permissions for the 'MyLocation' functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,7 +17,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UpdateUserAccount"></activity>
+        <activity android:name=".TrackPost"></activity>
+        <activity android:name=".AboutApp" />
+        <activity android:name=".UpdateUserAccount" />
         <activity
             android:name=".AllPostActivity"
             android:label="@string/app_name"

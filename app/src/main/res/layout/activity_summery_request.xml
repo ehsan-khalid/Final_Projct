@@ -316,7 +316,7 @@
             android:layout_gravity="right"
             android:layout_marginLeft="70dp"
             android:background="@drawable/shape"
-            android:onClick="confirm"
+            android:onClick="Cancel"
             android:text="إلغاء"
             android:textSize="20sp"
             android:textStyle="bold" />

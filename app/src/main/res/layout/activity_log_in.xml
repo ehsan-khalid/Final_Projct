@@ -17,6 +17,7 @@
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
+        android:id="@+id/login_input_phone"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:focusable="true"
@@ -25,7 +26,7 @@
         android:textDirection="rtl">
 
         <EditText
-
+            android:id="@+id/login_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_phone_black_24dp"
@@ -44,6 +45,7 @@
         android:focusableInTouchMode="true"
         android:textColorHint="#5F5E5D"
         android:textDirection="rtl"
+        android:id="@+id/login_input_pass"
 
         app:helperTextEnabled="false"
         app:passwordToggleEnabled="true">
@@ -56,7 +58,7 @@
             android:inputType="textPassword"
             android:layoutDirection="rtl"
             android:textAllCaps="false"
-
+            android:id="@+id/login_pass"
             android:textColorLink="#ffc606"
             android:textDirection="rtl"
             android:textSize="18dp" />
@@ -87,8 +89,6 @@
         android:textStyle="bold" />
 
     <Button
-
-
         android:id="@+id/button4"
         android:layout_width="170dp"
         android:layout_height="wrap_content"

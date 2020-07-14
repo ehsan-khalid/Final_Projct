@@ -201,6 +201,7 @@
                 android:paddingRight="10dp"
                 android:paddingBottom="3dp"
                 android:text="كبير \n500-800g"
+                android:hint="500-800g"
                 android:textColor="#000"
                 android:textSize="15dp"
 
@@ -224,6 +225,7 @@
                 android:paddingRight="10dp"
                 android:paddingBottom="3dp"
                 android:text=" متوسط\n200-500g"
+                android:hint="200-500g"
                 android:textColor="#000"
                 android:textSize="15dp"
                 android:textStyle="bold"
@@ -244,6 +246,7 @@
                 android:paddingRight="10dp"
                 android:paddingBottom="3dp"
                 android:text=" صغير\n100-200g"
+                android:hint="100-200g"
                 android:textColor="#000"
                 android:textSize="15dp"
                 android:textStyle="bold"

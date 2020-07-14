@@ -58,8 +58,16 @@ public class New_Account extends AppCompatActivity {
         input_phone=(TextInputLayout)findViewById(R.id.phone_input);
         input_pass1=(TextInputLayout)findViewById(R.id.password1_input);
         input_pass2=(TextInputLayout)findViewById(R.id.password2_input);
+        //_____________________________________________________________
     }
     public void create(View view) {
+        String Name=username.getText().toString();
+        String Phone=phone.getText().toString();
+        String Email=email.getText().toString();
+        String Address=phone.getText().toString();
+        String Password=pass2.getText().toString();
+
+
         validate();
         CheckInternetConnection checkInternetConnection =new CheckInternetConnection(getApplicationContext());
         boolean ischeck=checkInternetConnection.isConnectionToInternet();
@@ -71,10 +79,10 @@ public class New_Account extends AppCompatActivity {
         }
         else{
             //××××××××يحتاج ادخال الرابط ××××××
-            String myurl="here put URL";
+            String myurl="http://10.0.2.2/courier_Service_WebService/WebService1.asmx/" +
+                    "AddUser?Name="+Name+"&Phone="+Phone+"&Email="+Email+"&Address="+Address+"&Password="+Password;
             new AsyncTaskToCreateUser().execute(myurl);
-            Intent intent=new Intent(getApplicationContext(),New_Account.class);
-        startActivity(intent);}
+           }
     }
     //التحقق من صحة المدخلات
     public boolean validate(){
@@ -144,6 +152,11 @@ public class New_Account extends AppCompatActivity {
             try {
                 jsonObject = new JSONObject(progress[0]);
                 message=jsonObject.getString("Message");
+                Intent intent=new Intent(getApplicationContext(),Log_in.class);
+                startActivity(intent);
+
+                Toast.makeText(New_Account.this, message, Toast.LENGTH_SHORT).show();
+
             } catch (JSONException e) {
                 e.printStackTrace();
             }

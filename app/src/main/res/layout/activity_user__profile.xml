@@ -120,6 +120,7 @@
 
     </LinearLayout>
     <Button
+        android:onClick="Update_User_Account"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
